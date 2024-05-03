@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="title text-center">
+            <h1 class="display-3">Prodact Info</h1>
+        </div>
+        <label for="productName" class="text-muted my-2">productName</label>
+        <input type="text"  id="productName" class="form-control is-invalid">
+
+
+        <label for="productPrice" class="text-muted my-2">productPrice</label>
+        <input type="text" id="productPrice" class="form-control">
+
+
+        <label for="productCategory" class="text-muted my-2">productCategory</label>
+        <input type="text" id="productCategory" class="form-control">
+
+
+        <label for="productDesc" class="text-muted my-2">productDesc</label>
+        <textarea name="" id="productDesc" class="form-control "></textarea>
+
+        <button onclick="addProduct()" id="addBtn" class="float-start me-2 d-block btn btn-outline-primary my-3">add
+            Product</button>
+        <button onclick="updateProduct()" id="updateBtn" class="float-start me-2 d-none btn btn-outline-warning my-3">update
+            Product</button>
+        <button  disabled onclick="clearForm()" id="resetBtn" type="reset" class=" btn d-block btn-outline-secondary my-3  ">Reset</button>
+
+
+
+        <div class="w-75 mx-md-auto my-5 pt-3 text-center">
+            <input oninput="search(this.value)" id="searchInput" type="text" class="form-control w-75 mx-auto"
+                placeholder="Search product by name...">
+            <table class="table  table-striped fs-6">
+                <thead>
+                    <th>id</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Delete</th>
+                    <th>Update</th>
+                </thead>
+                <tbody id="tBody" >
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
